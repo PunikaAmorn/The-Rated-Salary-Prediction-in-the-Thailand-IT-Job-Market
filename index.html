@@ -1,0 +1,357 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+
+    <title>Thailand IT Salary Rates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.css">
+    
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="Code_vmc2015.png" alt="">
+                    <h4>Thailand IT Salary Rates</h4>
+                    <p>จากแบบสอบถามการสำรวจโปรแกรมเมอร์ 2019 ของสมาคมโปรแกรมเมอร์แห่งประเทศไทยและ DEPA การคำนวณอัตราเงินเดือนเบื้องต้นจาก ประสบการณ์การทำงาน การเรียนรู้โปรแกรม อาชีพ/ตำแหน่งงาน เทคโนโลยีหรือภาษาโปรแกรมมิ่งที่สามารถใช้งานได้ อายุ และการศึกษา</p>
+                    <hr>
+                    <p>Based on Survey 2019 from Thai Programmers Association and DEPA, our salary calculator allows you to find typical salaries based on experience level, field position, specific technologies, ages and education.</p>
+                </div>
+                <div class="col-md-9 register-right"> 
+                    <!-- <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="TH-tab" data-toggle="tab" href="#TH" role="tab" aria-controls="TH" aria-selected="true">ไทย</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="EN-tab" data-toggle="tab" href="#EN" role="tab" aria-controls="EN" aria-selected="false">English</a>
+                        </li>
+                    </ul>                    -->
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="TH" role="tabpanel" aria-labelledby="TH-tab">
+                            <h3 class="register-heading">การทำนายอัตราเงินเดือนของงานด้านเทคโนโลยีสารสนเทศ<br>ในตลาดแรงงานประเทศไทย</h3>
+                            <div class="register-form">
+                                <div class="row">
+                                    <div class="col-md-6">                                    
+                                        <div class="form-group">
+                                            <label>ระดับการศึกษา *</label>
+                                            <select class="chosen-select" id="edu_th" data-placeholder="กรุณาเลือกระดับการศึกษา" tabindex="4">
+                                                <option value=""></option>
+                                                <option value="1">ต่ำกว่ามัธยมศึกษา</option>
+                                                <option value="2">มัธยมศึกษาตอนต้น</option>
+                                                <option value="3">มัธยมศึกษาตอนปลาย</option>
+                                                <option value="4">ปวช.</option>
+                                                <option value="5">ปวส.</option>
+                                                <option value="6">ปริญญาตรี</option>
+                                                <option value="7">ปริญญาโท</option>
+                                                <option value="8">ปริญญาเอก</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">                        
+                                        <div class="form-group">
+                                            <label>อาชีพ/ตำแหน่งงาน *</label>
+                                            <select class="chosen-select" id="role_th" data-placeholder="กรุณาเลือกอาชีพ/ตำแหน่งงานที่ใกล้เคียง" tabindex="4">
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                    </div>          
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>อายุ *</label>
+                                            <input type="number" class="form-control" id="age_th" placeholder="0" value="" min=0>
+                                        </div>     
+                                    </div>                           
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>ประสบการณ์ทำงาน(ปี) *</label>
+                                            <input type="number" class="form-control" id="yoe_th" placeholder="0" value="" min=0>
+                                        </div>
+                                    </div>                                          
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>การเรียนรู้และประสบการณ์เกี่ยวกับโปรแกรม(ปี)*</label>
+                                            <input type="number" class="form-control" id="yolp_th" placeholder="0" value="" min=0>
+                                        </div> 
+                                    </div>                                
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>เทคโนโลยีคอมพิวเตอร์/ภาษาโปรแกรมมิ่งที่สามารถใช้งานได้ *</label>
+                                            <select data-placeholder="เลือกภาษาที่สามารถใช้ได้เพื่อใส่ระดับ" class="chosen-select" id="chosen_th" multiple tabindex="4">
+                                                <option value="'[ASP.net]'">ASP.net</option>
+                                                <option value="'[Assembly]'">Assembly</option>
+                                                <option value="'[Bash/Shell/PowerShell]'">Bash/Shell/PowerShell</option>
+                                                <option value="'[C]'">C</option>
+                                                <option value="'[C#]'">C#</option>
+                                                <option value="'[C++]'">C++</option>
+                                                <option value="'[Clojure]'">Clojure</option>
+                                                <option value="'[Dart]'">Dart</option>
+                                                <option value="'[Elixir]'">Elixir</option>
+                                                <option value="'[Erlang]'">Erlang</option>
+                                                <option value="'[Go]'">Go</option>
+                                                <option value="'[Groovy]'">Groovy</option>
+                                                <option value="'[Haskell]'">Haskell</option>
+                                                <option value="'[HTML/CSS]'">HTML/CSS</option>
+                                                <option value="'[Java]'">Java</option>
+                                                <option value="'[JavaScript]'">JavaScript</option>
+                                                <option value="'[Julia]'">Julia</option>
+                                                <option value="'[Kotlin]'">Kotlin</option>
+                                                <option value="'[Lua]'">Lua</option>
+                                                <option value="'[Objective-C]'">Objective-C</option>
+                                                <option value="'[Ocaml]'">Ocaml</option>
+                                                <option value="'[Pascal]'">Pascal</option>
+                                                <option value="'[Perl]'">Perl</option>
+                                                <option value="'[PHP]'">PHP</option>
+                                                <option value="'[Python]'">Python</option>
+                                                <option value="'[R]'">R</option>
+                                                <option value="'[Ruby]'">Ruby</option>
+                                                <option value="'[Rust]'">Rust</option>
+                                                <option value="'[Scala]'">Scala</option>
+                                                <option value="'[SQL]'">SQL</option>
+                                            </select>
+                                        </div>                      
+                                        <div class="col-md-12">
+                                            <table class="table">
+                                                <thead>
+                                                    <th>เทคโนโลยี/ภาษาโปรแกรมมิ่ง</th>
+                                                    <th class="center">ระดับพื้นฐาน</th>
+                                                    <th class="center">ระดับกลาง</th>
+                                                    <th class="center">ระดับชำนาญ</th>
+                                                </thead>
+                                                <tbody id="code_tag_th">
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>                                        
+                                        <hr>       
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row-reverse">
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btnRegister" onclick="calculator('th')">คำนวณ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="tab-pane fade show" id="EN" role="tabpanel" aria-labelledby="EN-tab">
+                            <h3 class="register-heading">The Rated Salary Prediction in the Thailand IT Job Market</h3>
+                            <div class="register-form">
+                                <div class="row">
+                                    <div class="col-md-6">                                    
+                                        <div class="form-group">
+                                            <label>Education Level *</label>
+                                            <select class="chosen-select" id="edu_en" data-placeholder="select education level">
+                                                <option value=""></option>
+                                                <option value="1">Lower High School</option>
+                                                <option value="2">Junior High School</option>
+                                                <option value="3">High School</option>
+                                                <option value="4">Vocational Certificate</option>
+                                                <option value="5">High Vocational Certificate</option>
+                                                <option value="6">Bachelor Degree</option>
+                                                <option value="7">Master's Degree</option>
+                                                <option value="8">Doctor of Philosophy</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">                        
+                                        <div class="form-group">
+                                            <label>Role *</label>
+                                            <select class="chosen-select" id="role_en" data-placeholder="select a role closest to yours">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>          
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Ages *</label>
+                                            <input type="number" class="form-control" id="age_en" placeholder="0" value="" min=0>
+                                        </div>     
+                                    </div>                           
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Years of experience *</label>
+                                            <input type="number" class="form-control" id="yoe_en" placeholder="0" value="" min=0>
+                                        </div>
+                                    </div>                                          
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Years of learn programme *</label>
+                                            <input type="number" class="form-control" id="yolp_en" placeholder="0" value="" min=0>
+                                        </div> 
+                                    </div>                                
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Technologies/Languages that you can used *</label><br>
+                                            <select data-placeholder="select languages of programme of input level" id="chosen_en" class="chosen-select" multiple tabindex="4" >
+                                                <option value="'[ASP.net]'">ASP.net</option>
+                                                <option value="'[Assembly]'">Assembly</option>
+                                                <option value="'[Bash/Shell/PowerShell]'">Bash/Shell/PowerShell</option>
+                                                <option value="'[C]'">C</option>
+                                                <option value="'[C#]'">C#</option>
+                                                <option value="'[C++]'">C++</option>
+                                                <option value="'[Clojure]'">Clojure</option>
+                                                <option value="'[Dart]'">Dart</option>
+                                                <option value="'[Elixir]'">Elixir</option>
+                                                <option value="'[Erlang]'">Erlang</option>
+                                                <option value="'[Go]'">Go</option>
+                                                <option value="'[Groovy]'">Groovy</option>
+                                                <option value="'[Haskell]'">Haskell</option>
+                                                <option value="'[HTML/CSS]'">HTML/CSS</option>
+                                                <option value="'[Java]'">Java</option>
+                                                <option value="'[JavaScript]'">JavaScript</option>
+                                                <option value="'[Julia]'">Julia</option>
+                                                <option value="'[Kotlin]'">Kotlin</option>
+                                                <option value="'[Lua]'">Lua</option>
+                                                <option value="'[Objective-C]'">Objective-C</option>
+                                                <option value="'[Ocaml]'">Ocaml</option>
+                                                <option value="'[Pascal]'">Pascal</option>
+                                                <option value="'[Perl]'">Perl</option>
+                                                <option value="'[PHP]'">PHP</option>
+                                                <option value="'[Python]'">Python</option>
+                                                <option value="'[R]'">R</option>
+                                                <option value="'[Ruby]'">Ruby</option>
+                                                <option value="'[Rust]'">Rust</option>
+                                                <option value="'[Scala]'">Scala</option>
+                                                <option value="'[SQL]'">SQL</option>
+                                            </select>
+                                        </div>                         
+                                        <div class="col-md-12">
+                                            <table class="table">
+                                                <thead>
+                                                    <th>Technologies/Languages</th>
+                                                    <th class="center">Basic level</th>
+                                                    <th class="center">intermediate level</th>
+                                                    <th class="center">Professional level</th>
+                                                </thead>
+                                                <tbody id="code_tag_en">                                                   
+                                                </tbody>
+                                            </table>
+                                        </div>                                        
+                                        <hr>       
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row-reverse">
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btnRegister" onclick="calculator('en')">Calculator</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="txt"></div>	
+        <script src="js/chosen.jquery.js" type="text/javascript"></script>
+        <script src="js/field.js" type="text/javascript"></script>
+        <script src="js/coef_confinv.js" type="text/javascript"></script>
+        <script src="js/confidence-interval.js" type="text/javascript"></script>
+        <script src="js/predict_salary.js" type="text/javascript"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <script type="text/javascript">
+            job = [".Net Programmer","Academic Researcher","Admin Support","Android Developer","Application Development Teamlead","Application Operation","Application Specialist","Application Support","Assistant Researcher","Back-End Developer","Biomedical Engineering","Business Database & Analyst","CEO","Client-Facing Engineer","Cloud Engineer","Company Owner && Founder","Computer Architect","Consultant","Core Network Engineer","Creative","CTO","Customer Service","Data Engineer","Data or Business Database & Analyst","Data Scientist or Machine Learning Specialist","Database & Database & Analyst Administrator","Designer","Desktop or Enterprise Applications Developer","DevOps Specialist","Director","Economist","Educator / Instructor","Electrical Engineer","Embedded Applications or Devices Developer","Engineer","Engineer / Planner","Engineer Support","Engineering Manager","Engineering Supervisor","Engineering System","Freelance","Front-End Developer","Full-Stack Developer","FX Dealer","Game or Graphics Developer","General Manager","HR & HRIS Technology ","Immersive Application Developer","Internal Audit","IT Manager","IT Security","IT Specialist","IT Specialists/ Product Engineer","IT Support","Logistics","Manager","Manager Support","Mechanical Engineer","Mobile Developer","Network Automation","Network Engineer","Network Transport Engineer","Officer","Online Marketing","Operation Manager (Part-Time)","Product Manager","Product Owner","Production Control","Production Manager","Production Planner","Programmer","Project Manager","QA or Test Developer","Research & Development","Research Assistant","Robotics Software Engineer","RPA Developer","Sale/Marketing Manager","SAP Abaper","SAP Consultant","Scientist","Security Engineer","Security Implementation Engineer","Security Specialist","Senior Developer","Senior Executive/VP","Senior Programmer","Senior Technical Consultant","Service","Service Engineer","Service IOT Engineer","Side Engineer","Software Developer","Software Engineer","Software Implementer","Solutions Consultant","Specialist Developer","State Enterprise","Statistic & Admin(IT Support)","Supplychain","Support Engineer","System Administrator","System Database & Analyst","Team Lead","Tech Specialist","Tech Support & Professional Service Lead","Technical Consultant","Technical Solution Architect","Technical Support Engineer","Technician Process Computer","UI Designer","UX/UI Developer","Web Developer"];
+            position = ""
+            for (var i=0; i<job.length ; i++){
+                position+= `<option value="${job[i]}">${job[i]}</option>`;
+            }   
+                     
+            $("#chosen_en").val("");  
+            $("#chosen_th").val(""); 
+            $("#age_en").val("");
+            $("#yoe_en").val("");
+            $("#yolp_en").val("");
+            $("#age_th").val("");
+            $("#yoe_th").val("");
+            $("#yolp_th").val("");
+            $("#edu_en").val("").chosen();
+            $("#edu_th").val("").chosen();           
+            $("#role_en").append(position).chosen();
+            $("#role_th").append(position).chosen();
+
+            $("#chosen_en").chosen().change(function(e, params){
+                values = $("#chosen_en").chosen().val();
+                tr_all = $("#code_tag_en tr").map(function() { return this.id; }).get();
+                if(values!=null){
+                    for (let i=0; i<values.length; i++){
+                        values[i] = values[i].replace("'", "").replace("'", "")
+                        if(($.inArray(values[i],tr_all)<0) || tr_all.length==0 ){
+                            prog = values[i].replace("[", "").replace("]", "");
+                            $("#code_tag_en").append(`<tr id="${values[i]}"><td>${prog}</td><td class="center"><div class="radio maxl"><input type="radio" name="${prog}" value="1" checked></div></td><td class="center"><div class="radio maxl"><input type="radio" name="${prog}" value="2"></div></td><td class="center"><div class="radio maxl"><input type="radio" name="${prog}" value="3"></div></td></tr>`);
+                        }
+                    }
+                    $("#code_tag_en tr").each(function() {
+                        if ($.inArray( this.id, values )<0){
+                            $(this).remove()
+                        }
+                    });
+                }
+                else{$("#code_tag_en tr").remove();}
+            });
+            $("#chosen_th").chosen().change(function(e, params){
+                values = $("#chosen_th").chosen().val();
+                tr_all = $("#code_tag_th tr").map(function() { return this.id; }).get();
+                if(values!=null){
+                    for (let i=0; i<values.length; i++){
+                        values[i] = values[i].replace("'", "").replace("'", "")
+                        if(($.inArray(values[i],tr_all)<0) || tr_all.length==0){
+                            prog = values[i].replace("[", "").replace("]", "");
+                            $("#code_tag_th").append(`<tr id="${values[i]}"><td>${prog}</td><td class="center"><div class="radio maxl"><input type="radio" name="${prog}" value="1" checked></div></td><td class="center"><div class="radio maxl"><input type="radio" name="${prog}" value="2"></div></td><td class="center"><div class="radio maxl"><input type="radio" name="${prog}" value="3"></div></td></tr>`);
+                        }
+                    }
+                    $("#code_tag_th tr").each(function() {
+                        if ($.inArray( this.id, values )<0){
+                            $(this).remove()
+                        }
+                    });
+                }
+                else{  $("#code_tag_th tr").remove(); }
+            });
+
+
+            const error_warning = w_txt => swal("คุณยังกรอกข้อมูลไม่ครบถ้วน!", `กรุณากรอกข้อมูล : \n\n${w_txt}` , "warning");
+
+            function check_input(role ,education,age,yft ,lp ,code_level){
+                let warning_alert = ""
+                if(!education){ warning_alert += " ระดับการศึกษา\n"}
+                if(!role){ warning_alert += " อาชีพ/ตำแหน่งงาน\n"}
+                if(!age){ warning_alert += " อายุ\n"}
+                if(!yft){ warning_alert += " ประสบการณ์ทำงาน(ปี)\n"}
+                if(!lp){ warning_alert += " การเรียนรู้และประสบการณ์เกี่ยวกับโปรแกรม(ปี)\n"}
+                if($.isEmptyObject(code_level)){ warning_alert += " เทคโนโลยีคอมพิวเตอร์/ภาษาโปรแกรมมิ่งที่สามารถใช้งานได้\n"}
+                let check = true
+                if(!warning_alert){check =false}
+                return [warning_alert,check]
+            }
+
+            function calculator(lang){ 
+                var education = $(`#edu_${lang}`).val();   
+                var role = $(`#role_${lang}`).val();
+                var field = check_field(role);                      
+                var age = $(`#age_${lang}`).val();
+                var yft = $(`#yoe_${lang}`).val();
+                var lp = $(`#yolp_${lang}`).val();
+                var code_level = {}
+                $(`#code_tag_${lang} tr input:checked`).map(function() {code_level[this.name] = this.value});
+ 
+                var [warning_alert,check] = check_input(role ,education,age,yft ,lp ,code_level)
+                if(check){
+                    error_warning(warning_alert) 
+                    return
+                }
+                
+                var y_pred_interval = pred_salary(field , education, age, yft, lp, code_level)
+                
+            }
+ 
+		</script>
+   
+
+    </body>
+</html>
