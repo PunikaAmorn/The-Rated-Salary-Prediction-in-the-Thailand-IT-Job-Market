@@ -60,6 +60,7 @@ function pred_salary(field_a , education=6, age=23, yft=0, lp=0, code_level){
         }
     }
     
-    let [y_low,y_high] = confidence_interval(y_pred,[x_matrix],confinv_tSnC)
-    console.log(y_low,y_high)
+    var y_interval = confidence_interval(y_pred,[x_matrix],confinv_tSnC)
+    y_interval.sort()
+    return y_interval
 }
