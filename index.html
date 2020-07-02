@@ -14,23 +14,21 @@
     <div class="register">
             <div class="row">
                 <div class="col-md-3 register-left">
-                    <img src="Code_vmc2015.png" alt="">
+                    <img class="action" src="img/Code_vmc2015.png" alt="icon coding">
                     <h4>Thailand IT Salary Rates</h4>
                     <p>จากแบบสอบถามการสำรวจโปรแกรมเมอร์ 2019 ของสมาคมโปรแกรมเมอร์แห่งประเทศไทยและ DEPA การคำนวณอัตราเงินเดือนเบื้องต้นจาก ประสบการณ์การทำงาน การเรียนรู้โปรแกรม อาชีพ/ตำแหน่งงาน เทคโนโลยีหรือภาษาโปรแกรมมิ่งที่สามารถใช้งานได้ อายุ และการศึกษา</p>
                     <hr>
                     <p>Based on Survey 2019 from Thai Programmers Association and DEPA, our salary calculator allows you to find typical salaries based on experience level, field position, specific technologies, ages and education.</p>
+                    <hr class="light"/>
+                    <div class="logo">
+                        <img src="img/logo-thai-programmer-white.png" alt="Thai Programmer">
+                        <img src="img/depa_logo_white.png" alt="depa">
+                        <img src="img/NIDA_logo.png" alt="NIDA">
+                    </div>
                 </div>
-                <div class="col-md-9 register-right"> 
-                    <!-- <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="TH-tab" data-toggle="tab" href="#TH" role="tab" aria-controls="TH" aria-selected="true">ไทย</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="EN-tab" data-toggle="tab" href="#EN" role="tab" aria-controls="EN" aria-selected="false">English</a>
-                        </li>
-                    </ul>                    -->
+                <div class="col-md-9 register-right">
                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="TH" role="tabpanel" aria-labelledby="TH-tab">
+                        <div class="tab-pane fade show active" id="CalForm" role="tabpanel" aria-labelledby="CalForm-tab">
                             <h3 class="register-heading">การทำนายอัตราเงินเดือนของงานด้านเทคโนโลยีสารสนเทศ<br>ในตลาดแรงงานประเทศไทย</h3>
                             <div class="register-form">
                                 <div class="row">
@@ -136,111 +134,33 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="tab-pane fade show" id="EN" role="tabpanel" aria-labelledby="EN-tab">
-                            <h3 class="register-heading">The Rated Salary Prediction in the Thailand IT Job Market</h3>
+                        <div class="tab-pane fade show" id="Result" role="tabpanel" aria-labelledby="Result-tab">
+                            <h3 class="register-heading">การทำนายอัตราเงินเดือนของงานด้านเทคโนโลยีสารสนเทศ<br>ในตลาดแรงงานประเทศไทย</h3>
                             <div class="register-form">
                                 <div class="row">
-                                    <div class="col-md-6">                                    
-                                        <div class="form-group">
-                                            <label>Education Level *</label>
-                                            <select class="chosen-select" id="edu_en" data-placeholder="select education level">
-                                                <option value=""></option>
-                                                <option value="1">Lower High School</option>
-                                                <option value="2">Junior High School</option>
-                                                <option value="3">High School</option>
-                                                <option value="4">Vocational Certificate</option>
-                                                <option value="5">High Vocational Certificate</option>
-                                                <option value="6">Bachelor Degree</option>
-                                                <option value="7">Master's Degree</option>
-                                                <option value="8">Doctor of Philosophy</option>
-                                            </select>
-                                        </div>
+                                    <div class="mx-auto text-center">
+                                        <h5>จากรายละเอียดที่ได้รับ</h5><br> 
+                                        <h4 class="text-blue">อัตราเงินเดือนของคุณคือ</h4>
+                                        <h1 class="text-navy">~<span id="y_low"></span> - <span id="y_high"></span></h1>
                                     </div>
-                                    <div class="col-md-6">                        
-                                        <div class="form-group">
-                                            <label>Role *</label>
-                                            <select class="chosen-select" id="role_en" data-placeholder="select a role closest to yours">
-                                                <option></option>
-                                            </select>
-                                        </div>
-                                    </div>          
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Ages *</label>
-                                            <input type="number" class="form-control" id="age_en" placeholder="0" value="" min=0>
-                                        </div>     
-                                    </div>                           
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Years of experience *</label>
-                                            <input type="number" class="form-control" id="yoe_en" placeholder="0" value="" min=0>
-                                        </div>
-                                    </div>                                          
-                                    
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Years of learn programme *</label>
-                                            <input type="number" class="form-control" id="yolp_en" placeholder="0" value="" min=0>
-                                        </div> 
-                                    </div>                                
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>Technologies/Languages that you can used *</label><br>
-                                            <select data-placeholder="select languages of programme of input level" id="chosen_en" class="chosen-select" multiple tabindex="4" >
-                                                <option value="'[ASP.net]'">ASP.net</option>
-                                                <option value="'[Assembly]'">Assembly</option>
-                                                <option value="'[Bash/Shell/PowerShell]'">Bash/Shell/PowerShell</option>
-                                                <option value="'[C]'">C</option>
-                                                <option value="'[C#]'">C#</option>
-                                                <option value="'[C++]'">C++</option>
-                                                <option value="'[Clojure]'">Clojure</option>
-                                                <option value="'[Dart]'">Dart</option>
-                                                <option value="'[Elixir]'">Elixir</option>
-                                                <option value="'[Erlang]'">Erlang</option>
-                                                <option value="'[Go]'">Go</option>
-                                                <option value="'[Groovy]'">Groovy</option>
-                                                <option value="'[Haskell]'">Haskell</option>
-                                                <option value="'[HTML/CSS]'">HTML/CSS</option>
-                                                <option value="'[Java]'">Java</option>
-                                                <option value="'[JavaScript]'">JavaScript</option>
-                                                <option value="'[Julia]'">Julia</option>
-                                                <option value="'[Kotlin]'">Kotlin</option>
-                                                <option value="'[Lua]'">Lua</option>
-                                                <option value="'[Objective-C]'">Objective-C</option>
-                                                <option value="'[Ocaml]'">Ocaml</option>
-                                                <option value="'[Pascal]'">Pascal</option>
-                                                <option value="'[Perl]'">Perl</option>
-                                                <option value="'[PHP]'">PHP</option>
-                                                <option value="'[Python]'">Python</option>
-                                                <option value="'[R]'">R</option>
-                                                <option value="'[Ruby]'">Ruby</option>
-                                                <option value="'[Rust]'">Rust</option>
-                                                <option value="'[Scala]'">Scala</option>
-                                                <option value="'[SQL]'">SQL</option>
-                                            </select>
-                                        </div>                         
-                                        <div class="col-md-12">
-                                            <table class="table">
-                                                <thead>
-                                                    <th>Technologies/Languages</th>
-                                                    <th class="center">Basic level</th>
-                                                    <th class="center">intermediate level</th>
-                                                    <th class="center">Professional level</th>
-                                                </thead>
-                                                <tbody id="code_tag_en">                                                   
-                                                </tbody>
-                                            </table>
-                                        </div>                                        
-                                        <hr>       
+                                    <div class="pt-5">
+                                        <h6>หมายเหตุ :</h6> 
+                                        <ul>
+                                            <li>การคำนวนอัตราเงินเดือนนั้นยังต้องขึ้นอยู่กับอีกหลากหลายปัจจัย ในงานวิจัยนี้นำเพียงปัจจัยบางส่วนมาใช้ในการพิจารณาเท่านั้น</li>
+                                            <li>การทำนายอัตราเงินเดือนนี้ได้นำข้อมูลแบบสอบถามจาก<a href="www.digitalskill.org">สมาคมโปรแกรมเมอร์ไทย</a></li>
+                                            <li>อัตราเงินเดือนนี้คำนวณมาจากการวิเคราะห์การถดถอยแบบพหุคูณซึ่งจะแบ่งไปตามแต่ละประเภทของงานด้านเทคโนโลยีสารสนเทศ</li>
+                                            <li>สามารถดูเพิ่มเติมได้ที่ <a href="https://github.com/PunikaAmorn/The-Rated-Salary-Prediction">github</a></li>
+                                        </ul>
+                                         
                                     </div>
                                 </div>
                                 <div class="d-flex flex-row-reverse">
                                     <div class="col-md-6">
-                                        <button type="submit" class="btnRegister" onclick="calculator('en')">Calculator</button>
+                                        <button type="submit" class="btnRegister" onClick="backbutton()">Back</button>
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                         
                     </div>
                 </div>
@@ -262,38 +182,14 @@
                 position+= `<option value="${job[i]}">${job[i]}</option>`;
             }   
                      
-            $("#chosen_en").val("");  
             $("#chosen_th").val(""); 
-            $("#age_en").val("");
-            $("#yoe_en").val("");
-            $("#yolp_en").val("");
             $("#age_th").val("");
             $("#yoe_th").val("");
             $("#yolp_th").val("");
-            $("#edu_en").val("").chosen();
             $("#edu_th").val("").chosen();           
-            $("#role_en").append(position).chosen();
             $("#role_th").append(position).chosen();
 
-            $("#chosen_en").chosen().change(function(e, params){
-                values = $("#chosen_en").chosen().val();
-                tr_all = $("#code_tag_en tr").map(function() { return this.id; }).get();
-                if(values!=null){
-                    for (let i=0; i<values.length; i++){
-                        values[i] = values[i].replace("'", "").replace("'", "")
-                        if(($.inArray(values[i],tr_all)<0) || tr_all.length==0 ){
-                            prog = values[i].replace("[", "").replace("]", "");
-                            $("#code_tag_en").append(`<tr id="${values[i]}"><td>${prog}</td><td class="center"><div class="radio maxl"><input type="radio" name="${prog}" value="1" checked></div></td><td class="center"><div class="radio maxl"><input type="radio" name="${prog}" value="2"></div></td><td class="center"><div class="radio maxl"><input type="radio" name="${prog}" value="3"></div></td></tr>`);
-                        }
-                    }
-                    $("#code_tag_en tr").each(function() {
-                        if ($.inArray( this.id, values )<0){
-                            $(this).remove()
-                        }
-                    });
-                }
-                else{$("#code_tag_en tr").remove();}
-            });
+            
             $("#chosen_th").chosen().change(function(e, params){
                 values = $("#chosen_th").chosen().val();
                 tr_all = $("#code_tag_th tr").map(function() { return this.id; }).get();
@@ -319,16 +215,23 @@
 
             function check_input(role ,education,age,yft ,lp ,code_level){
                 let warning_alert = ""
-                if(!education){ warning_alert += " ระดับการศึกษา\n"}
-                if(!role){ warning_alert += " อาชีพ/ตำแหน่งงาน\n"}
-                if(!age){ warning_alert += " อายุ\n"}
-                if(!yft){ warning_alert += " ประสบการณ์ทำงาน(ปี)\n"}
-                if(!lp){ warning_alert += " การเรียนรู้และประสบการณ์เกี่ยวกับโปรแกรม(ปี)\n"}
-                if($.isEmptyObject(code_level)){ warning_alert += " เทคโนโลยีคอมพิวเตอร์/ภาษาโปรแกรมมิ่งที่สามารถใช้งานได้\n"}
+                if(!education){ warning_alert += " - ระดับการศึกษา\n"}
+                if(!role){ warning_alert += " - อาชีพ/ตำแหน่งงาน\n"}
+                if(!age){ warning_alert += " - อายุ\n"}
+                if(!yft){ warning_alert += " - ประสบการณ์ทำงาน(ปี)\n"}
+                if(!lp){ warning_alert += " - การเรียนรู้และประสบการณ์เกี่ยวกับโปรแกรม(ปี)\n"}
+                if($.isEmptyObject(code_level)){ warning_alert += " - เทคโนโลยีคอมพิวเตอร์/ภาษาโปรแกรมมิ่งที่สามารถใช้งานได้\n"}
                 let check = true
                 if(!warning_alert){check =false}
                 return [warning_alert,check]
             }
+
+            const numberWithCommas = x => {
+                // x = Math.round(x, 4);
+                x *= 10000;
+                x = parseInt(x)
+                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            };
 
             function calculator(lang){ 
                 var education = $(`#edu_${lang}`).val();   
@@ -347,7 +250,25 @@
                 }
                 
                 var y_pred_interval = pred_salary(field , education, age, yft, lp, code_level)
+
+                $("#y_low").html(numberWithCommas(y_pred_interval[0]))
+                $("#y_high").html(numberWithCommas(y_pred_interval[1]))
+
+                $("#CalForm").attr('class','tab-pane fade show')
+                $("#Result").attr('class','tab-pane fade show active')
                 
+            }
+
+            const backbutton = function(){     
+                $("#chosen_th").val(""); 
+                $("#age_th").val("");
+                $("#yoe_th").val("");
+                $("#yolp_th").val("");
+                $("#edu_th").val("");   
+                $("#chosen_th").val("").trigger("chosen:updated");  
+                $("#code_tag_th tr").remove();       
+                $("#CalForm").attr('class','tab-pane fade show active')
+                $("#Result").attr('class','tab-pane fade show')
             }
  
 		</script>
