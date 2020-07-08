@@ -141,14 +141,14 @@
                                     <div class="mx-auto text-center">
                                         <h5>จากรายละเอียดที่ได้รับ</h5><br> 
                                         <h4 class="text-blue">อัตราเงินเดือนของคุณคือ</h4>
-                                        <h1 class="text-navy"><span id="y_low"></span> - <span id="y_high"></span></h1>
+                                        <h1 class="text-navy" id="y_all"></h1>
                                     </div>
                                     <div class="pt-5">
                                         <h6>หมายเหตุ :</h6> 
                                         <ul>
                                             <li>การคำนวนอัตราเงินเดือนนั้นยังต้องขึ้นอยู่กับอีกหลากหลายปัจจัย ในงานวิจัยนี้นำเพียงปัจจัยบางส่วนมาใช้ในการพิจารณาเท่านั้น</li>
                                             <li>การทำนายอัตราเงินเดือนนี้ได้นำข้อมูลแบบสอบถามในปี 2019 จาก<a href="www.digitalskill.org">สมาคมโปรแกรมเมอร์ไทย</a></li>
-                                            <li>อัตราเงินเดือนนี้คำนวณมาจากการวิเคราะห์การถดถอยแบบพหุคูณซึ่งจะแบ่งไปตามแต่ละประเภทของงานด้านเทคโนโลยีสารสนเทศ</li>
+                                            <li>อัตราเงินเดือนนี้คำนวณมาจากการวิเคราะห์การถดถอยแบบพหุคูณซึ่งจะแบ่งไปตามแต่ละประเภทของงานด้านเทคโนโลยีสารสนเทศ โดยช่วงที่เกิดขึ้นมาจากการคำนวนค่าความเชื่อมั่น (confident Interval)</li>
                                             <li>สามารถดูเพิ่มเติมได้ที่ <a href="https://github.com/PunikaAmorn/The-Rated-Salary-Prediction">github</a></li>
                                         </ul>
                                          
@@ -171,6 +171,7 @@
         <script src="js/chosen.jquery.js" type="text/javascript"></script>
         <script src="js/field.js" type="text/javascript"></script>
         <script src="js/coef_confinv.js" type="text/javascript"></script>
+        <!-- <script src="js/coef_confinv_stepwise.js" type="text/javascript"></script> -->
         <script src="js/confidence-interval.js" type="text/javascript"></script>
         <script src="js/predict_salary.js" type="text/javascript"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -250,9 +251,12 @@
                 }
                 
                 var y_pred_interval = pred_salary(field , education, age, yft, lp, code_level)
-
-                $("#y_low").html(numberWithCommas(y_pred_interval[0]))
-                $("#y_high").html(numberWithCommas(y_pred_interval[1]))
+                if(y_pred_interval[0]<0){
+                    $("#y_all").html('0')
+                }
+                else{
+                    $("#y_all").html(`<span>${numberWithCommas(y_pred_interval[1])}</span> - <span>${numberWithCommas(y_pred_interval[1])}</span>`)
+                }
 
                 $("#CalForm").attr('class','tab-pane fade show')
                 $("#Result").attr('class','tab-pane fade show active')

@@ -27,8 +27,8 @@ function pred_salary(field_a , education=6, age=23, yft=0, lp=0, code_level){
     
     let y_pred = 0
     for (const [key, value] of Object.entries(cond)) {
-        if(key == 'salary'){
-            y_pred += value //intercept
+        if(key == 'const'){
+            y_pred += value //intercept or constant
         }
         else if(key == 'education level'){
             y_pred += (value*education)
