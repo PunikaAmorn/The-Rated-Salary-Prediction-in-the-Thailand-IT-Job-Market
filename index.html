@@ -171,7 +171,6 @@
         <script src="js/chosen.jquery.js" type="text/javascript"></script>
         <script src="js/field.js" type="text/javascript"></script>
         <script src="js/coef_confinv.js" type="text/javascript"></script>
-        <!-- <script src="js/coef_confinv_stepwise.js" type="text/javascript"></script> -->
         <script src="js/confidence-interval.js" type="text/javascript"></script>
         <script src="js/predict_salary.js" type="text/javascript"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -255,7 +254,7 @@
                     $("#y_all").html('0')
                 }
                 else{
-                    $("#y_all").html(`<span>${numberWithCommas(y_pred_interval[1])}</span> - <span>${numberWithCommas(y_pred_interval[1])}</span>`)
+                    $("#y_all").html(`<span>${numberWithCommas(y_pred_interval[0])}</span> - <span>${numberWithCommas(y_pred_interval[1])}</span>`)
                 }
 
                 $("#CalForm").attr('class','tab-pane fade show')
